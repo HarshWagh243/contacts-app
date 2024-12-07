@@ -1,0 +1,71 @@
+/* Wrapper for the toggle theme */
+.toggle-theme-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent */
+    padding: 5px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px); /* Glass effect */
+  }
+  
+  /* Sun and moon icons */
+  .toggle-theme-wrapper span {
+    font-size: 1.5rem;
+    color: var(--accent-color, #f39c12);
+  }
+  
+  /* Toggle switch base */
+  .toggle-theme {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  /* Hide the checkbox input */
+  .toggle-theme input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Slider (toggle) */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--accent-color, #f39c12);
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  /* Slider handle (circle) */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  /* Move handle when checkbox is checked */
+  input:checked + .slider {
+    background-color: #4d4d4d; /* Darker shade for light mode */
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+  

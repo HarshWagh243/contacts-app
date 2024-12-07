@@ -1,0 +1,51 @@
+/* index.css */
+
+/* Reset some margins and paddings */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Dark theme */
+  color: #ffffff;           /* Text color */
+}
+
+/* Customize Bootstrap container padding */
+.container {
+  padding: 20px;
+}
+
+/* Ensure consistent box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dadada;
+  color: #1f2023;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1f2023;
+    color: #dadada;
+  }
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark theme styles */
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Light theme styles */
+body.light {
+  background-color: #ffffff;
+  color: #121212;
+}
